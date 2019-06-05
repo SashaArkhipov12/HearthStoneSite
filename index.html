@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-image: url(bg.jpg); height: 820px; background-size: 100%">
+
+	<script type="text/javascript">
+
+		let getRandom = function(){
+			let random = Math.random()*10;
+			let round = Math.round(random);
+			return round;
+		}
+		let Enemy = function(){
+			for(let index = 0; index<10; index = index + 1){
+				let randomCard = Math.random()*9;
+				let roundCard = Math.round(randomCard);
+				let card = document.createElement("img");
+				let imgs = ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png"];
+				document.body.appendChild(card);
+				card.src = imgs[roundCard];
+				card.style.width = "175px";
+			}
+		}
+		let Player = function(){
+			for(let i = 0; i<10; i = i + 1){
+				let randomPlayerCard = Math.random()*9;
+				let roundPlayerCard = Math.round(randomPlayerCard);
+				let Playercard = document.createElement("img");
+				let Playerimgs = ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png"];
+				document.body.appendChild(Playercard);
+				Playercard.src = Playerimgs[roundPlayerCard];
+				Playercard.style.width = "175px";
+			}
+		}
+
+	</script>
+
+</body>
+</html>
